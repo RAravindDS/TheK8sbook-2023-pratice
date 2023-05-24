@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1 
+metadata: 
+  namespace: shield 
+  name: super-pod        
+spec:
+  containers:
+  - image: nigelpoulton/k8sbook:shield-01
+    name: bus-ctr
+    ports:
+    - containerPort: 8080
+    imagePullPolicy: Always

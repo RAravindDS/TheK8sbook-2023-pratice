@@ -1,0 +1,14 @@
+kind: Service 
+apiVersion: v1 
+metadata: 
+  name: deployment-service 
+  labels: 
+    app: hello-world 
+spec: 
+  type: LoadBalancer 
+  ports: 
+  - port: 8080 
+    nodePort: 30001 
+    protocol: TCP 
+  selector: 
+    name: deployment-is-my-name
